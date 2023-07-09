@@ -1,0 +1,182 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.wrapper>* {
+    padding: 10px;
+    margin: 10px;
+    flex: 1 100%;
+   
+    border-radius: 10px;
+}
+
+.header {
+    background: orange;
+    height: 120px;
+}
+
+.footer {
+    background: lightgreen;
+    height: 80px;
+}
+
+.main {
+    text-align: left;
+    background: deepskyblue;
+    height: 300px;
+    font-size: 24px;
+}
+
+.asidel {
+    background: gold;
+}
+
+.aside2 {
+    background: hotpink;
+}
+
+@media all and (min-width: 800px) {
+    .main {
+        flex: 3;
+    }
+
+    .aside1 {
+        order: 1;
+    }
+
+    .aside2 {
+        order: 3;
+    }
+
+    .main {
+        order: 2;
+    }
+
+    .footer {
+        order: 4;
+    }
+}
+
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1;
+    }
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+
+
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: blueviolet;
+    min-height: 100px;
+    margin: 10px;
+    padding: 20px 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    /* width: 100%; */
+    min-height: 300px;
+    margin: 10px;
+    padding: 20px 10px;
+}
+
+.asidel {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 20%;
+    background-color: rgb(4, 80, 80);
+    margin: 5px;
+    order: 1;
+}
+
+.aside2 {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 20%;
+    background-color: rgb(27, 208, 17);
+    margin: 5px;
+    order: 3;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 55%;
+    background-color: brown;
+    margin: 5px;
+    order: 2;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+
+    min-height: 50px;
+    background-color: rgb(207, 11, 148);
+    margin: 10px;
+}
+
+
+
+
+/* Media Queries for Mobile */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .asidel,
+    .aside2,
+    .main {
+        flex-basis: 100%;
+        min-height: 100px;
+    }
+}
+
+/* Media Queries for Tablet */
+@media (max-width: 600px) {
+
+    .header,
+    .container,
+    .footer {
+        flex-direction: column;
+    }
+
+    .header,
+    .footer {
+        min-height: 80px;
+    }
+
+    .asidel,
+    .aside2,
+    .main {
+        flex-basis: 100%;
+        margin: 5px 0;
+        min-height: 100px;
+    }
+}
